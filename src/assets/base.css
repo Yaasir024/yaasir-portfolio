@@ -1,0 +1,45 @@
+
+@font-face {
+  font-family: "Sharp Grotesk";
+  src: url("./fonts/SharpGrotesk-Medium20.otf") format("opentype"), url("./fonts/SharpGrotesk-Medium25.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TetraLight";
+  src: url("./fonts/TetraLight.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CallingCode";
+  src: url("./fonts/CallingCode-Regular.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: #ffffff;
+  background: #101010;
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: 'TetraLight', sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul li {
+  list-style-type: none !important;
+}
