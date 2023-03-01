@@ -1,5 +1,51 @@
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed } from 'vue'
+
+const data = [
+  { id: 1, first_name: 'Jesse', last_name: 'Simmons', date: '2016-10-15 13:43:27', gender: 'Male' },
+  { id: 2, first_name: 'John', last_name: 'Jacobs', date: '2016-12-15 06:00:53', gender: 'Male' },
+  {
+    id: 3,
+    first_name: 'Tina',
+    last_name: 'Gilbert',
+    date: '2016-04-26 06:26:28',
+    gender: 'Female'
+  },
+  {
+    id: 4,
+    first_name: 'Clarence',
+    last_name: 'Flores',
+    date: '2016-04-10 10:28:46',
+    gender: 'Male'
+  },
+  { id: 5, first_name: 'Anne', last_name: 'Lee', date: '2016-12-06 14:38:38', gender: 'Female' }
+]
+
+const columns = [
+  {
+    field: 'id',
+    label: 'ID',
+    width: '40',
+    numeric: true
+  },
+  {
+    field: 'first_name',
+    label: 'First Name'
+  },
+  {
+    field: 'last_name',
+    label: 'Last Name'
+  },
+  {
+    field: 'date',
+    label: 'Date',
+    centered: true
+  },
+  {
+    field: 'gender',
+    label: 'Gender'
+  }
+]
 
 const portfolioData = [
   {
@@ -10,9 +56,8 @@ const portfolioData = [
 ]
 </script>
 
-
-
 <template>
+  <b-table :data="data" :columns="columns"></b-table>
   <section class="py-[100px]">
     <div class="my-10 flex justify-center">
       <span class="text-base font-calling self-start">&lt;h4&gt;</span>
@@ -20,9 +65,17 @@ const portfolioData = [
       <span class="text-base font-calling self-end">&lt;/h4&gt;</span>
     </div>
     <div class="">
-      <div class="flex flex-wrap items-center" v-for="portfolio in portfolioData" :key="portfolio.id">
+      <div
+        class="flex flex-wrap items-center"
+        v-for="portfolio in portfolioData"
+        :key="portfolio.id"
+      >
         <div class="flex-full md:flex-50%">
-          <img :src="portfolio.img" :alt="portfolio.title" class="w-[280px] xs:w-[310px] sm:w-[380px] h-[280px]  xs:h-[310px] sm:h-[380px] mx-auto md:ml-auto rounded-full" />
+          <img
+            :src="portfolio.img"
+            :alt="portfolio.title"
+            class="w-[280px] xs:w-[310px] sm:w-[380px] h-[280px] xs:h-[310px] sm:h-[380px] mx-auto md:ml-auto rounded-full"
+          />
         </div>
         <div class="flex-full md:flex-50% pl-5">
           <span class="text-base font-calling self-start">&lt;h3&gt;</span>
@@ -45,7 +98,7 @@ const portfolioData = [
             />
           </svg>
         </button>
-        <div class="w-[75%] h-1.5  xs:h-2 sm:h-3 bg-primary-color/10 rounded-md overflow-hidden">
+        <div class="w-[75%] h-1.5 xs:h-2 sm:h-3 bg-primary-color/10 rounded-md overflow-hidden">
           <div class="h-full w-[30%] bg-primary-color"></div>
         </div>
         <button
