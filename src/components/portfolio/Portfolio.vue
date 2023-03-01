@@ -1,3 +1,17 @@
+<script setup>
+import { ref, computed } from "vue";
+
+const portfolioData = [
+  {
+    id: 1,
+    title: 'Resilience17',
+    img: '/images/resilience.PNG'
+  }
+]
+</script>
+
+
+
 <template>
   <section class="py-[100px]">
     <div class="my-10 flex justify-center">
@@ -6,13 +20,13 @@
       <span class="text-base font-calling self-end">&lt;/h4&gt;</span>
     </div>
     <div class="">
-      <div class="flex flex-wrap items-center">
+      <div class="flex flex-wrap items-center" v-for="portfolio in portfolioData" :key="portfolio.id">
         <div class="flex-full md:flex-50%">
-          <img src="/images/resilience.PNG" alt="" class="w-[280px] xs:w-[310px] sm:w-[380px] h-[280px]  xs:h-[310px] sm:h-[380px] mx-auto md:ml-auto rounded-full" />
+          <img :src="portfolio.img" :alt="portfolio.title" class="w-[280px] xs:w-[310px] sm:w-[380px] h-[280px]  xs:h-[310px] sm:h-[380px] mx-auto md:ml-auto rounded-full" />
         </div>
         <div class="flex-full md:flex-50% pl-5">
           <span class="text-base font-calling self-start">&lt;h3&gt;</span>
-          <h3 class="text-[36px] font-calling">Resilience17</h3>
+          <h3 class="text-[36px] font-calling">{{ portfolio.title }}</h3>
           <span class="text-base font-calling self-end">&lt;/h3&gt;</span>
         </div>
       </div>
