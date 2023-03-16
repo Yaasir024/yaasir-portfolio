@@ -14,8 +14,12 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: Home
-    },
-  ]
+    }
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    // always scroll to top
+    return { top: 0, behavior: 'smooth' }
+  }
 })
 
 export default router
