@@ -4,7 +4,8 @@ const places = ref([
   {
     role: 'Frontend Developer',
     employer: 'Starwells',
-    date: 'March 2023 - 2023',
+    date: 'March 2023',
+    url: 'https://www.starwells.co/',
     location: 'Nigeria',
     tasks: [
       'Converted Figma UI mockup design to web templates.',
@@ -16,7 +17,7 @@ const places = ref([
   {
     role: 'Frontend Developer',
     employer: 'Resileince17',
-    date: 'Feb 2023 - 2023',
+    date: 'Feb 2023',
     location: 'Nigeria',
     tasks: [
       'Developed and maintained code for website with Vuejs and TailwindCSS',
@@ -26,6 +27,7 @@ const places = ref([
   {
     role: 'Frontend Developer',
     employer: 'Unify',
+    url: 'http://unify-three.vercel.app/',
     date: 'May 2022 - 2022',
     location: 'Nigeria',
     tasks: ['Converted Figma UI mockup design to web templates.']
@@ -87,18 +89,19 @@ const getActiveTab = (i) => ({
             </div>
             <span class="text-[12px] font-bold">{{ place.date }}</span>
           </div>
-          <h1 class="text-lg leading-[24px]">{{ place.role }} <span class="text-regal-blue">@{{ place.employer }}</span></h1>
+          <h1 class="text-lg leading-[24px]">
+            {{ place.role }} <a :href="place.url" target="_blank" class="text-regal-blue" v-if="place.url">@{{ place.employer }}</a> <span class="text-regal-blue" v-else>@{{ place.employer }}</span>
+            
+          </h1>
           <span class="text-[12px]">{{ place.location }}</span>
           <ul class="">
-          <li
-            v-for="(task, i) in place.tasks"
-            :key="`tech-${i}`"
-            class="text-base mt-1"
-          >
-            <div class="inline-block h-[10px] w-[10px] shrink-0 rounded-full bg-regal-blue mr-2"></div>
-            {{ task }}
-          </li>
-        </ul>
+            <li v-for="(task, i) in place.tasks" :key="`tech-${i}`" class="text-base mt-1">
+              <div
+                class="inline-block h-[10px] w-[10px] shrink-0 rounded-full bg-regal-blue mr-2"
+              ></div>
+              {{ task }}
+            </li>
+          </ul>
         </div>
       </div>
     </div>
