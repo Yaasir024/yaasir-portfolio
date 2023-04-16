@@ -1,2 +1,16 @@
 @import './base.css';
 
+::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  width: 6px;
+  z-index: 2;
+}
+::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-thumb {
+  background: #64ffda;
+  border-radius: 1rem;
+}
+::-webkit-scrollbar-track,
+html::-webkit-scrollbar-track {
+  background: var(--regal-purple);
+}
