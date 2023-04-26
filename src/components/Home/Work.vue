@@ -57,7 +57,19 @@ const places = ref([
       'Converted UI mockup design to web template.',
       'Tutored CodeCraft students on Frontend Development.'
     ]
-  }
+  },
+  {
+    role: 'Frontend Developer',
+    employer: 'Beauty Glow Organics',
+    url: 'https://beautygloworganics.com.ng/',
+    date: 'October 2021 - Present',
+    location: 'Nigeria',
+    tasks: [
+      'Updated website UI on regular basis.',
+      'Added new products and maintained product stock.',
+      'Improved website payment system.'
+    ]
+  },
 ])
 
 const activeTab = ref(0)
