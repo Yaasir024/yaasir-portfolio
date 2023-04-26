@@ -6,7 +6,8 @@ const technologies = [
   'Typescript',
   'Vue 2&3',
   'Nuxt',
-  'Firebase'
+  'Firebase',
+  'Tailwind'
 ]
 </script>
 
