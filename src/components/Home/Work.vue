@@ -3,7 +3,7 @@ import { ref, reactive, onMounted, computed } from 'vue'
 const places = ref([
   {
     role: 'Software Engineer',
-    employer: 'Wudpeckker',
+    employer: 'Wudpecker',
     date: 'May 2023 - Present',
     url: 'https://www.wudpecker.io/',
     location: 'Nigeria',
