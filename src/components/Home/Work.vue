@@ -2,6 +2,31 @@
 import { ref, reactive, onMounted, computed } from 'vue'
 const places = ref([
   {
+    role: 'Software Engineer',
+    employer: 'Wudpeckker',
+    date: 'May 2023 - Present',
+    url: 'https://www.wudpecker.io/',
+    location: 'Nigeria',
+    tasks: [
+      'Maintained code for the website\'s frontend.',
+      'Implemented new features on the frontend.',
+      'Maintained bot for joining meetings.',
+    ]
+  },
+  {
+    role: 'Frontend Developer',
+    employer: 'Rainbow Saas',
+    date: 'June 2023',
+    url: 'https://www.rainbowtechafrica.com/',
+    location: 'Nigeria',
+    tasks: [
+      'Converted Figma mockup design to web templates.',
+      'Developed and maintained code for website with Vuejs',
+      'Reviewed and deployed code.',
+      'Interacted closely with the UI team to ensure precise implementation of UI design.',
+    ]
+  },
+  {
     role: 'Frontend Developer',
     employer: 'Whois-ID',
     date: 'March 2023',
@@ -31,7 +56,7 @@ const places = ref([
   {
     role: 'Frontend Developer',
     employer: 'Resileince17',
-    url: 'https://resilience17.netlify.app/',
+    url: 'https://resilience17.com/',
     date: 'Feb 2023',
     location: 'Nigeria',
     tasks: [
